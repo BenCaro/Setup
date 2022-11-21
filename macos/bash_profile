@@ -169,6 +169,8 @@ function firstTimeSetup {
     brew install autocode
     brew install automake
     brew install watch
+    brew tap microsoft/git
+    brew install --cask git-credential-manager-core
 
 # Not sure if these did anything
 #brew install pip
