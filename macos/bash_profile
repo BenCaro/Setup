@@ -63,10 +63,7 @@ alias bb="brazil-build"
 alias jd-gui="java -jar /Users/bcaro/bin/jd-gui-1.4.0.jar"
 alias visual_arm="java -server -Xmx512M -jar /Users/bcaro/Tools/visual_arm/local/bin/visual/content/VisUAL.jar"
 alias ctags++='ctags -R --c++-kinds=+p --fields=+iaS --extra=+q /usr/include /usr/local/include'
-alias passGen="apg -M SNC"
-
-# /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-agent="Mozilla/5.0 (Linux: Android 6.0; Nexus 5 Build/MRA58N) AppleweKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36)"
-alias gogoChrom='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --user-agent=\"Mozilla/5.0 (Linux: Android 6.0; Nexus 5 Build/MRA58N) AppleweKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36)\"'
+alias passGen="apg -a 1 -M SNCL -m 12"
 
 function micVol {
     while (( 1 )); do
