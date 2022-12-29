@@ -8,9 +8,10 @@ sudo apt-get install -y software-properties-common
 
 sudo apt install curl # if you haven't already installed curl
 
-wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo apt-key add -
-echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
-sudo apt-get update
+#wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo apt-key add -
+#echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
+#sudo apt-get update
+#sudo apt-get install -y workspacesclient
 
 sudo apt-add-repository universe
 sudo apt-add-repository ppa:git-core/ppa -y
@@ -72,10 +73,7 @@ sudo apt-get install -y zlib1g-dev
 sudo apt-get install -y libssl-dev 
 sudo apt-get install -y libreadline-dev 
 sudo apt-get install -y lib32z1 
-sudo apt-get install -y lib32ncurses5 
-sudo apt-get install -y lib32bz2-1.0 
-sudo apt-get install -y ia32-libs 
-sudo apt-get install -y g++-4.6  g++-4.7 g++-4.8 g++-4.6-multilib g++-4.7-multilib g++-4.8-multilib 
+sudo apt-get install -y g++-10 g++-10-multilib
 sudo apt-get install -y openjdk-8-jdk openjdk-11-jdk openjdk-13-jdk openjdk-16-jdk openjdk-17-jdk
 sudo apt-get install -y golang-go
 sudo apt-get install -y sshfs
@@ -86,8 +84,6 @@ sudo apt-get install -y linux-tools-`uname -r`
 sudo apt-get install -y vlc
 sudo apt-get install -y compiz-plugins
 sudo apt-get install -y metacity
-sudo apt-get install -y amazon-windows-pdx-us-en
-sudo apt-get install -y brazilcli
 sudo apt-get install -y findbugs
 sudo apt-get install -y checkstyle
 sudo apt-get install -y device-tree-compiler
@@ -101,8 +97,10 @@ sudo apt-get install -y elfutils libdw-dev
 sudo apt-get install -y exfat-fuse exfat-utils
 sudo apt-get install -y pinta
 sudo apt-get install -y protobuf-compiler libprotobuf-dev libprotoc-dev
-sudo apt-get install -y workspacesclient
 sudo apt-get install -y qemu-user-static
+
+#sudo apt-get install -y amazon-windows-pdx-us-en
+#sudo apt-get install -y brazilcli
 
 #sudo  apt-get install -y docker.io
 #sudo  addgroup ubuntu docker
