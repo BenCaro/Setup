@@ -24,7 +24,9 @@ HISTSIZE=1000000
 SHELL_SESSION_HISTORY=0
 
 # export PS1='\d \t \u-mac\$'
-export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\d \t \[\033[01;33m\]\u-mac\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$'
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\$(date \"+%a %b %d %Y %T\")
+\[\033[01;33m\]\u-mac\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
+
 
 # Remap "Insert" key to Right Shift (something that is harmless to hit by mistake) 
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000049,"HIDKeyboardModifierMappingDst":0x7000000E5}]}' > /dev/null 2>&1
