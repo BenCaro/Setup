@@ -1,0 +1,69 @@
+[url "ssh://bcaro@usw-gerrit2-mirror.labcollab.net:9418/"]
+        insteadOf = git://gerrit2.labcollab.net/
+        insteadOf = ssh://gerrit2.labcollab.net:9418/
+        insteadOf = ssh://bcaro@gerrit2.labcollab.net:9418/
+
+[url "ssh://bcaro@gerrit2.labcollab.net:9418/"]
+        pushInsteadOf = git://usw-gerrit2-mirror.labcollab.net/
+        pushInsteadOf = ssh://usw-gerrit2-mirror.labcollab.net:9418/
+        pushInsteadOf = ssh://bcaro@usw-gerrit2-mirror.labcollab.net:9418/
+        pushInsteadOf = git://gerrit2.labcollab.net/
+        pushInsteadOf = ssh://gerrit2.labcollab.net:9418/
+        pushInsteadOf = ssh://bcaro@gerrit2.labcollab.net:9418/
+
+[url "ssh://bcaro@sea-gerrit4-mirror.aka.amazon.com:9418/"]
+        insteadOf = git://gerrit4.labcollab.net/
+        insteadOf = ssh://gerrit4.labcollab.net:9418/
+        insteadOf = ssh://bcaro@gerrit4.labcollab.net:9418/
+
+[url "ssh://bcaro@gerrit4.labcollab.net:9418/"]
+        pushInsteadOf = git://sea-gerrit4-mirror.aka.amazon.com/
+        pushInsteadOf = ssh://sea-gerrit4-mirror.aka.amazon.com:9418/
+        pushInsteadOf = ssh://bcaro@sea-gerrit4-mirror.aka.amazon.com:9418/
+        pushInsteadOf = git://gerrit4.labcollab.net/
+        pushInsteadOf = ssh://gerrit4.labcollab.net:9418/
+        pushInsteadOf = ssh://bcaro@gerrit4.labcollab.net:9418/
+
+[url "ssh://bcaro@usw2-acos2014-gerrit-mirror.labcollab.net:9418/"]
+    insteadOf = git://gerrit6.labcollab.net/
+    insteadOf = https://gerrit6.labcollab.net/gerrit/
+    insteadOf = http://gerrit6.labcollab.net/gerrit/
+    insteadOf = ssh://gerrit6.labcollab.net:9418/
+    insteadOf = ssh://gerrit6.labcollab.net/
+    insteadOf = ssh://bcaro@gerrit6.labcollab.net:9418/
+
+[url "ssh://bcaro@gerrit6.labcollab.net:9418/"]
+    pushInsteadOf = git://usw2-acos2014-gerrit-mirror.labcollab.net/
+    pushInsteadOf = ssh://usw2-acos2014-gerrit-mirror.labcollab.net:9418/
+    pushInsteadOf = ssh://bcaro@usw2-acos2014-gerrit-mirror.labcollab.net:9418/
+    pushInsteadOf = git://gerrit6.labcollab.net/
+    pushInsteadOf = http://gerrit6.labcollab.net/gerrit/
+    pushInsteadOf = https://gerrit6.labcollab.net/gerrit/
+    pushInsteadOf = ssh://gerrit6.labcollab.net:9418/
+    pushInsteadOf = ssh://gerrit6.labcollab.net/
+    pushInsteadOf = ssh://bcaro@gerrit6.labcollab.net:9418/
+
+[color]
+    ui = auto
+[user]
+    name = Benjamin Caro
+    email = bcaro@amazon.com
+[alias]
+	dag  = log --decorate --all --oneline --graph
+	dagx = log --decorate --all --oneline --graph --color --pretty=format:'%C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	dgx  = log --decorate       --oneline --graph --color --pretty=format:'%C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	dg   = log --decorate       --oneline --graph --color
+	logd = log --decorate                         --color
+[amazon]
+	append-cr-url = true
+	pull-request-by-default = true
+[core]
+	pager = less -FMRiX
+	excludesfile = /apollo/env/AdnDevEnv/etc/git/gitignore
+[push]
+	default = simple
+#[init]
+#    templatedir = /apollo/env/AdnDevEnv/lib/git-templates
+#[commit]
+#    template = /apollo/env/AdnDevEnv/etc/git/gitmessage
+
