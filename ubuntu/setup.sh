@@ -7,8 +7,6 @@ sudo apt-get upgrade
 sudo apt-get install -y software-properties-common
 
 sudo apt install curl # if you haven't already installed curl
-#sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-#curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
@@ -70,7 +68,6 @@ sudo apt-get install -y i2c-tools
 sudo apt-get install -y qemu-user-static
 sudo apt-get install -y lib32stdc++6
 sudo apt-get install -y libusb-1.0-0-dev
-#sudo apt-get install -y ros-melodic-desktop python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt-get install -y zlib1g-dev 
 sudo apt-get install -y libssl-dev 
 sudo apt-get install -y libreadline-dev 
@@ -82,6 +79,7 @@ sudo apt-get install -y g++-4.6  g++-4.7 g++-4.8 g++-4.6-multilib g++-4.7-multil
 sudo apt-get install -y openjdk-8-jdk openjdk-11-jdk openjdk-13-jdk openjdk-16-jdk openjdk-17-jdk
 sudo apt-get install -y golang-go
 sudo apt-get install -y sshfs
+sudo apt-get install -y tftpd-hpa
 sudo apt-get install -y linux-tools-common 
 sudo apt-get install -y linux-tools-generic 
 sudo apt-get install -y linux-tools-`uname -r`
@@ -105,7 +103,6 @@ sudo apt-get install -y pinta
 sudo apt-get install -y protobuf-compiler libprotobuf-dev libprotoc-dev
 sudo apt-get install -y workspacesclient
 sudo apt-get install -y qemu-user-static
-
 
 #sudo  apt-get install -y docker.io
 #sudo  addgroup ubuntu docker
