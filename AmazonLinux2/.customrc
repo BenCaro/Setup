@@ -23,6 +23,10 @@ HISTFILESIZE=1000000000
 HISTSIZE=1000000
 SHELL_SESSION_HISTORY=0
 
+export PROMPT="
+%B%F{blue}(%D %*) <%?> [%~] $program %f%b
+%B%F{yellow}%n-cloud %# %f%b"
+
 # Remap "Insert" key to Right Shift (something that is harmless to hit by mistake) 
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000049,"HIDKeyboardModifierMappingDst":0x7000000E5}]}' > /dev/null 2>&1
 

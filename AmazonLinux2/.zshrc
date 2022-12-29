@@ -5,12 +5,8 @@ export AUTO_TITLE_SCREENS="NO"
 export AWS_EC2_METADATA_DISABLED=true
 
 export PROMPT="
-%B%F{blue}(%D %*) <%?> [%~] $program %f%b
-%B%F{yellow}%n-cloud %# %f%b"
-
-#export PROMPT="
-#%{$fg[white]%}(%D %*) <%?> [%~] $program %{$fg[default]%}
-#%{$fg[cyan]%}%m %#%{$fg[default]%} "
+%{$fg[white]%}(%D %*) <%?> [%~] $program %{$fg[default]%}
+%{$fg[cyan]%}%m %#%{$fg[default]%} "
 
 export RPROMPT=
 
