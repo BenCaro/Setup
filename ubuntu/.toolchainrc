@@ -1,0 +1,8 @@
+java6
+addToPathH /opt/kindle/toolchains/arm-2010q1/bin
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+export CODESOURCERY_ROOT=/opt/kindle/toolchains/arm-2010q1
+export USE_TRAPZ=true
+export KERNEL_CROSS_COMPILE=${CODESOURCERY_ROOT}/bin/arm-none-linux-gnueabi-
+export UBOOT_CROSS_COMPILE=${CODESOURCERY_ROOT}/bin/arm-none-linux-gnueabi-
+export XLOADER_CROSS_COMPILE=${CODESOURCERY_ROOT}/bin/arm-none-linux-gnueabi-
