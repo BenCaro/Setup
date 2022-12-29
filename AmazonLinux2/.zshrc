@@ -41,7 +41,10 @@ export PATH=$HOME/.toolbox/bin:$PATH
 #BENJAMIN BEGIN
 if [ -f "$HOME/.customrc" ]; then
     . "$HOME/.customrc"
-
-    java8
 fi
+
+# Weird thing that got added on old cloud desktop's zshrc file
+# See https://refresh.sage.amazon.dev/posts/1578775?autoRedirectedFromLegacyUI=1
+# export AWS_EC2_METADATA_DISABLED=true
+
 #BENJAMIN END
