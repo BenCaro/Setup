@@ -17,6 +17,8 @@
 # PreBrief
 # https://w.amazon.com/bin/view/HirePreBriefHelper/
 #
+# zsh documentation
+# https://zsh.sourceforge.io/Doc/Release/Options.html#History
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -33,7 +35,10 @@ export PROMPT="
 %B%F{yellow}%n-cloud %# %f%b"
 
 # Remap "Insert" key to Right Shift (something that is harmless to hit by mistake) 
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000049,"HIDKeyboardModifierMappingDst":0x7000000E5}]}' > /dev/null 2>&1
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[4~" end-of-line
+
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
