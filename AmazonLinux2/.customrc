@@ -18,6 +18,7 @@
 # https://w.amazon.com/bin/view/HirePreBriefHelper/
 #
 
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
@@ -81,6 +82,26 @@ function getTopDiskWasters {
 
 function getAllPIDs {
     ps -aef | grep -i $1 | grep -v "grep" | awk {'print $2'}   
+}
+
+function docker_run {
+    xhost local:root && docker run -it --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="QT_X11_NO_MITSHM=1" --privileged=true --rm --net=host -e DISPLAY=$DISPLAY $@
+}
+
+function docker_exec {
+    docker exec -it  `docker ps  | tail -1 | awk {'print $1'}` bash
+}
+
+function docker_stop {
+    docker stop  `docker ps  | tail -1 | awk {'print $1'}` bash
+}
+
+function docker_kill {
+    docker kill  `docker ps  | tail -1 | awk {'print $1'}` bash
+}
+
+function docker_logs {
+    docker logs -f  `docker ps  | tail -1 | awk {'print $1'}`
 }
 
 function path {
