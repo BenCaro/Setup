@@ -103,4 +103,4 @@ sudo apt-get install -y qemu-user-static
 #sudo apt-get install -y brazilcli
 
 #sudo  apt-get install -y docker.io
-#sudo  addgroup ubuntu docker
+#https://w.amazon.com/index.php/Docker/Ubuntu
