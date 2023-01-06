@@ -99,6 +99,8 @@ sudo apt-get install -y pinta
 sudo apt-get install -y protobuf-compiler libprotobuf-dev libprotoc-dev
 sudo apt-get install -y qemu-user-static
 
+sudo apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib  build-essential chrpath socat cpio python3 python3-pexpect  xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm zstd
+
 #sudo apt-get install -y amazon-windows-pdx-us-en
 #sudo apt-get install -y brazilcli
 
