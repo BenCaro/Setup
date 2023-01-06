@@ -153,7 +153,9 @@ function addToPathH {
     do
         if [[ $item != $1 ]]; then
 
-            if [[ ! $temp_path == *$item* ]]; then
+            if [[ $temp_path == *:$item:* || $temp_path == item:* ]]; then
+                : # Do nothing if item already in the path
+            else
 
                 if [[ -e $item ]]; then
                     temp_path=$item:$temp_path
@@ -179,7 +181,9 @@ function addToPathT {
     do
         if [[ $item != $1 ]]; then
 
-            if [[ ! $temp_path == *$item* ]]; then
+            if [[ $temp_path == *:$item:* || $temp_path == item:* ]]; then
+                : # Do nothing if item already in the path
+            else
 
                 if [[ -e $item ]]; then
                     temp_path=$item:$temp_path
