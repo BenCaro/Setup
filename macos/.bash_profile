@@ -116,34 +116,62 @@ function codeClean {
 }
 
 function addToPathH {
+
+    if [[ ! -e $1 ]]; then
+        echo "customrc: Cannot add $1 to PATH because it doesn't exist"
+        return
+    fi
+
+    temp_path=""
     for item in `echo $PATH | tr ':' '\n'`
     do
-        if [[ $item == $1 ]]; then
-            echo $1 already on path > /dev/null 2>&1
-            return
+        if [[ $item != $1 ]]; then
+
+            if [[ $temp_path == *:$item:* || $temp_path == item:* ]]; then
+                : # Do nothing if item already in the path
+            else
+
+                if [[ -e $item ]]; then
+                    temp_path=$item:$temp_path
+                else
+                    echo "customrc: Cannot add $item to PATH because it doesn't exist"
+                fi
+            fi
         fi
     done
-    if [[ -e $1  ]]; then
-        export PATH=$1:$PATH
-    else
-        echo "customrc: Cannot add $1 to PATH because it doesn't exist"
-    fi
+
+    export PATH=$1:$temp_path
 }
 
 function addToPathT {
+
+    if [[ ! -e $1 ]]; then
+        echo "customrc: Cannot add $1 to PATH because it doesn't exist"
+        return
+    fi
+
+    temp_path=""
     for item in `echo $PATH | tr ':' '\n'`
     do
-        if [[ $item == $1 ]]; then
-            echo $1 already on path > /dev/null 2>&1
-            return
+        if [[ $item != $1 ]]; then
+
+            if [[ $temp_path == *:$item:* || $temp_path == item:* ]]; then
+                : # Do nothing if item already in the path
+            else
+
+                if [[ -e $item ]]; then
+                    temp_path=$item:$temp_path
+                else
+                    echo "customrc: Cannot add $item to PATH because it doesn't exist"
+                fi
+            fi
         fi
     done
-    if [[ -e $1  ]]; then
-        export PATH=$PATH:$1
-    else
-        echo "customrc: Cannot add $1 to PATH because it doesn't exist"
-    fi
+
+    export PATH=$temp_path:$1
 }
+
+
 
 function macBackup {
     scp ~/.bash_profile bcaro-ubuntu.aka.amazon.com:/mnt/local/macBackup
@@ -183,5 +211,4 @@ function firstTimeSetup {
 
 addToPathH /usr/local/sbin
 addToPathH ~/bin
-addToPathH /apollo/env/SDETools/bin
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
