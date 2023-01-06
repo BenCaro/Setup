@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sudo yum-config-manager --add-repo http://mirror.centos.org/centos/7/sclo/x86_64/rh/
+
 sudo yum update
 sudo yum upgrade
 
@@ -79,4 +81,13 @@ sudo yum install -y exfat-fuse exfat-utils
 sudo yum install -y pinta
 sudo yum install -y protobuf-compiler libprotobuf-dev libprotoc-dev
 sudo yum install -y qemu-user-static
+sudo yum install -y zstd
+sudo yum install -y zlib-devel
+sudo yum install -y devtoolset-8-gcc devtoolset-8-gcc-c++
+sudo yum install -y pcre pcre-devel lzma xz-devel
+
+sudo yum install -y gawk make wget tar bzip2 gzip python3 unzip perl patch  diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath socat perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue python3-pip xz which SDL-devel xterm
+sudo yum install -y docbook-style-dsssl docbook-style-xsl docbook-dtds docbook-utils fop libxslt dblatex xmlto
+
+sudo pip3 install GitPython jinja2
 
