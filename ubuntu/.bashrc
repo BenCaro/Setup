@@ -119,8 +119,6 @@ fi
 #BENJAMIN BEGIN
 if [ -f "$HOME/.customrc" ]; then
     . "$HOME/.customrc"
-
-    java8
 fi
 
 #if [ -f "$HOME/.toolchainrc" ]; then
