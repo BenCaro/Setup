@@ -87,6 +87,7 @@ sudo apt-get install -y metacity
 sudo apt-get install -y findbugs
 sudo apt-get install -y checkstyle
 sudo apt-get install -y device-tree-compiler
+sudo apt-get install -y u-boot-tools
 sudo apt-get install -y nautilus-open-terminal
 sudo apt-get install -y silversearcher-ag
 sudo apt-get install -y binutils-dev
