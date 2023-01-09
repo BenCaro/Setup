@@ -86,6 +86,10 @@ function amzClone {
      git clone ssh://git.amazon.com:2222/pkg/$1
 }
 
+function listAvailablePackages {
+    yum list available
+}
+
 function diskWaste {
     du -h -d 1
 }
